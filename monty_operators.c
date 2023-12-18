@@ -1,13 +1,12 @@
 #include "monty.h"
 
 /**
- * f_add - add first 2 elements of the stack
- * @head: pointer to pointer to first node
- * @counter: line counter
- *
- * Return: none
- */
-
+* f_add - function that adds the top two elements of the stack
+* @head: double pointer head to the stack
+* @counter: line count
+*
+* Return: nothing
+*/
 void f_add(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
@@ -35,13 +34,12 @@ void f_add(stack_t **head, unsigned int counter)
 }
 
 /**
- * f_sub - subtract 2 elements of the stack
- * @head: pointer to pointer to first node
- * @counter: line counter
- *
- * Return: none
- */
-
+* f_sub - function that substracts nodes
+* @head: double head pointer to the stack
+* @counter: line count
+*
+* Return: nothing
+*/
 void f_sub(stack_t **head, unsigned int counter)
 {
 	stack_t *temp;
@@ -50,7 +48,6 @@ void f_sub(stack_t **head, unsigned int counter)
 	temp = *head;
 	for (nd = 0; temp != NULL; nd++)
 		temp = temp->next;
-
 	if (nd < 2)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", counter);
@@ -67,13 +64,12 @@ void f_sub(stack_t **head, unsigned int counter)
 }
 
 /**
- * f_mul - multiply first 2 elements of the stack
- * @head: pointer to pointer to first node
- * @counter: line counter
- *
- * Return: none
- */
-
+* f_mul - function that multiplies the top two elements of the stack
+* @head: double head pointer to the stack
+* @counter: line count
+*
+* Return: nothing
+*/
 void f_mul(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
@@ -101,13 +97,12 @@ void f_mul(stack_t **head, unsigned int counter)
 }
 
 /**
- * f_div - divide first 2 elements of the stack
- * @head: pointer to pointer to first node
- * @counter: line counter
- *
- * Return: none
- */
-
+* f_div - function that divides the top two elements of the stack
+* @head: double head pointer to the stack
+* @counter: line count
+*
+* Return: nothing
+*/
 void f_div(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
@@ -143,13 +138,13 @@ void f_div(stack_t **head, unsigned int counter)
 }
 
 /**
- * f_mod - compute modulos of two elements in stack
- * @head: pointer to pointer to first node
- * @counter: line counter
- *
- * Return: none
- */
-
+* f_mod - function that computes the remainder of the division of the second
+* top element of the stack by the top element of the stack
+* @head: double head pointer to the stack
+* @counter: line count
+*
+* Return: nothing
+*/
 void f_mod(stack_t **head, unsigned int counter)
 {
 	stack_t *h;

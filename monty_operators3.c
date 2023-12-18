@@ -1,13 +1,12 @@
 #include "monty.h"
 
 /**
- * f_pop - print top node on stack
- * @head: pointer to pointer of first node
- * @counter: line counter
- *
- * Return: none
- */
-
+* f_pop - function that prints the top of the stack
+* @head: double head pointer to the stack
+* @counter: line count
+*
+* Return: nothing
+*/
 void f_pop(stack_t **head, unsigned int counter)
 {
 	stack_t *h;
@@ -20,20 +19,18 @@ void f_pop(stack_t **head, unsigned int counter)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-
 	h = *head;
 	*head = h->next;
 	free(h);
 }
 
 /**
- * f_pint - print top node on stack
- * @head: pointer to pointer of first node
- * @counter: line counter
- *
- * Return: none
- */
-
+* f_pint - function that prints the top of the stack
+* @head: double head pointer to the stack
+* @counter: line count
+*
+* Return: nothing
+*/
 void f_pint(stack_t **head, unsigned int counter)
 {
 	if (*head == NULL)
@@ -44,18 +41,16 @@ void f_pint(stack_t **head, unsigned int counter)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-
 	printf("%d\n", (*head)->n);
 }
 
 /**
- * f_nop - do nothing
- * @head: pointer to pointer of first node
- * @counter: line counter
- *
- * Return: none
- */
-
+* f_nop - function that does nothing
+* @head: double head pointer to the stack
+* @counter: line count
+*
+* Return: nothing
+*/
 void f_nop(stack_t **head, unsigned int counter)
 {
 	(void) counter;
